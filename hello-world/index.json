@@ -5,8 +5,7 @@
     "steps": [
       {
         "title": "Step 1",
-        "text": "step1.md",
-        "courseData": "background.sh"
+        "text": "step1.md"
       },
       {
         "title": "Step 2",
@@ -41,8 +40,7 @@
   "environment": {
     "uilayout": "editor-terminal",
     "uieditorpath": "/slo-workshop",
-    "showdashboard": true,
-    "dashboards": [{"name": "IoT Project", "port": 5000}]
+    "showdashboard": false
   },
   "backend": {
     "imageid": "datadog-ubuntu",
