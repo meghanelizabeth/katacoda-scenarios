@@ -49,6 +49,8 @@
     "dashboards": [{"name": "IoT Project", "port": 5000}]
   },
   "backend": {
-    "imageid": "datadog-ubuntu"
+    "imageid": "datadog-ubuntu",
+    "reuseConnection": true,
+    "livetime": "3h"
   }
 }
