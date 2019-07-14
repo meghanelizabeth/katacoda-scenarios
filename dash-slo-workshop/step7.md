@@ -26,5 +26,3 @@ Buckets = [10, 50, 500] # in milliseconds
 To implement this you’ll need to emit custom metrics from the application using Dogstatd, https://docs.datadoghq.com/developers/dogstatsd/.
 
 You can then create a new Event Based SLO based on the two metrics.
-
-Implementation is left to the reader.

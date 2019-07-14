@@ -29,4 +29,3 @@ Let’s zoom into that bar graph for more detail:
 
 Remember, if you kill the iot-frontend, the rest of the downstream services will die.
 If you break something, switch back to your terminal running docker-compose. Remember, you can CTRL+C, followed by pressing up to rerun the last command and bring back up the entire suite of services.
-

@@ -29,4 +29,3 @@ But eventually will look something like this:
 
 
 The APM metric we care about is called `trace.flask.request.hits` and `trace.flask.request.errors`. Let’s use this to create our first SLI
-
