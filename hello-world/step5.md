@@ -13,14 +13,19 @@ Try removing a running service with a:
 $ docker ps
 $ docker kill <containerid>
  
-Trying killing the first container or two: 
-IMAGE COMING SOON
+Kill the container running the pumps: 
+
+![Container IDs](../assets/container-ids.png)
  
 Go back to your SLO details page. What happens? 
 
+![SLI Detail Page](../assets/detail-page-errors.png)
+
  
 Let’s zoom into that bar graph for more detail: 
-IMAGE COMING SOON
+
+![Bar Graph](../assets/graph-errors.png)
+
 
 Remember, if you kill the iot-frontend, the rest of the downstream services will die.
 If you break something, switch back to your terminal running docker-compose. Remember, you can CTRL+C, followed by pressing up to rerun the last command and bring back up the entire suite of services.

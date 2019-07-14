@@ -1,25 +1,22 @@
 # Starting Our Microservices with Docker Compose
 
-This APM workshop uses multiple docker images in order to build a micro services environment for local development.
+This SLO workshop uses multiple docker images in order to build a microservices environment for local development.
 
-We can inspect the `docker-compose.yml` in the distributed tracing folder, and see the exact services we'll be running.
+We can inspect the `docker-compose.yml` in the SLO workshop folder, and see the exact services we'll be running.
 
 Let's first bring everything up with the following command:
+`DD_API_KEY=<api key> docker-compose up`
 
-`DD_API_KEY=<api key> docker-compose up`{{copy}}
+With the services up, we should be able to view our services running on port 5000 in the web browser here:
+https://2886795280-5000-ollie01.environments.katacoda.com/
 
-If you get a error: 
+After clicking the link, hop into Datadog, and check to see if your services are there. It may take several minutes for the services to appear. 
 
-`cannot send spans to agent:8126: [Errno -2] Name does not resolve` 
 
-Make sure you entered your `DD_API_KEY`. 
+![Service Nav](../assets/services-nav.png)
 
-With the services up, we should be able to view our services running on port 5000 in the web browser here: 
+Eventually, you'll see the list of services like this:
 
-https://[[HOST_SUBDOMAIN]]-5000-[[KATACODA_HOST]].environments.katacoda.com/
-
-After clicking the link, hop into Datadog, and check to see if you're receiving traces. When you've confirmed traces are showing up, move on to the next step.
-
-![Trace List](../assets/trace-list.gif)
+![Service List](../assets/services-list.png)
 
 Remember, you can press CTRL+c and exit your running `docker-compose`.
