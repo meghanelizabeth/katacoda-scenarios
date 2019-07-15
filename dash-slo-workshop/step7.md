@@ -12,6 +12,8 @@ Now let’s create our SLO. Navigate to New Service Level Objective, https://app
 
 Go back to the water pump app and add a few more pumps. Observe the SLO, the error budget should be 100%
 
+https://2886795280-5000-ollie01.environments.katacoda.com/
+
 Now let’s edit the pumps service to introduce some latency and examine the results. 
 
 In the terminal type CTRL+c to stop the docker-compose stack, then navigate to `pumps-service/pump.py`. Find the code that handles the creation of a new pump and add sleep for 1s with time.sleep(1). Then bring the stack back up with `docker-compose up`.
@@ -19,4 +21,4 @@ In the terminal type CTRL+c to stop the docker-compose stack, then navigate to `
 Add a few more pumps and observe how it affects the error budget of the new SLO.
 
 Note: You may have noticed that we are using a gauge metric to represent the latency for this example: `trace.flask.request.duration.by.resource_service.99p` 
-and we used a monitor to find out the percentage of the time that this gauge is under our SLO threshold. While this works, it can be a bit hard to grasp. Whether you use monitors or latency as bucketed counters, you should select whatever works better for your requirements. 
+and we used a monitor to find out the percentage of the time that this gauge is under our threshold. While this works, it can be a bit hard to grasp. Whether you use monitors or latency as bucketed counters, you should select whatever works better for your requirements. 
