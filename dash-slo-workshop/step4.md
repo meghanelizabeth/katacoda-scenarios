@@ -1,6 +1,6 @@
-# Create a service level indicator (SLI) and service level objective SLO
+# Create a service level indicator (SLI) and service level objective (SLO)
 
-Navigate to create a new SLI and SLO. You can get there by clicking through to the sub-nav item under Monitors or going directly to https://app.datadoghq.com/slo
+Navigate to create a new SLI and SLO. You can get there by clicking through to the sub-nav item under Monitors, **Monitors -> Service Level Objectives** or going directly to https://app.datadoghq.com/slo/new
 
 ![SLO Nav](../assets/slo-nav.png)
 
@@ -12,7 +12,7 @@ And New SLO in the top right corner:
 
 There are a couple of options for us: `Monitor Based` or `Event Based`. But we care about availability and error rate so we'll select `Event Based` under `Define The Source` for our SLI creation. Using event based we can track percentage of requests that are successful. 
 
-**First step:** In the numerator field select `trace.flask.request.hits` scoped to the service and resource we care about: `service:iot-frontend`, `resource_name:post_/add_pump`, `env:slo-workshop`. The numerator represents all of your “good” (successful) hits.
+**First step:** In the numerator field select `trace.flask.request.hits` scoped to the service and resource we care about: `service:frontend`, `resource_name:post_/add_pump`, `env:slo-workshop`. The numerator represents all of your “good” (successful) hits.
 
 ![Editor](../assets/sli-edit.png)
 

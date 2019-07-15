@@ -10,7 +10,7 @@ Today we'll focus on 3 containers:
 * Frontend: a Python Flask application that receives calls and routes them to different backend services, the code lives in the `./frontend` folder. It also serves a React Single Page Application as a static file built from the `./single-page-frontend` folder.
 * Pumps: another Flask application that receives calls from the frontend related to the water pumps. The code lives in the `./pumps-api` folder.
 
-Both Flask applications are automatically instrumented by Datadog APM (see the `command` statements in `docker-compose.yaml`) which will generate metrics in the `trace.flask.` namespace.
+Both Flask applications are automatically instrumented by Datadog APM (see the `command` statements in `docker-compose.yaml`) which will generate metrics in the `trace.flask.` namespace. Hint: remember this for later.
 
 This Katacoda environment allows you to modify the Python code and see the results. Simply browse the code in the editor and edit it then type CTRL+c in the terminal to quit Docker Compose and start it again with the `docker-compose up` command.
 

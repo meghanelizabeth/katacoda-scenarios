@@ -6,7 +6,6 @@ There are several ways of implementing a Latency SLI. One way that we are going 
 * All requests <= 10ms
 * All requests <= 50ms
 * All requests <= 500ms
-* All requests <= 500ms
 
 We call this technique “bucketed counters”. The algorithm can be summarized like this in pseudo-code:
 

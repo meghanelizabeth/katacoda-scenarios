@@ -12,7 +12,8 @@ We care about users being able to add pumps so let’s scope down to the `add_pu
 ![Trace View](../assets/trace-view.png)
 
 
-Back to our scenario: You can see that a `POST` to 
+
+You can see that a `POST` to 
 `/add_pump` in the frontend service (frontend/api.py) calls a `POST` request to `/devices` in the pumps-service (pumps-api/pumps.py).
 
 
@@ -26,4 +27,4 @@ But eventually will look something like this:
 
 ![Frontend Errors](../assets/frontend-errors.png)
 
-The APM metric we care about is called `trace.flask.request.hits` and `trace.flask.request.errors`. Let’s use this to create our first SLI. 
+Remember before we mentioned that the APM metrics were instrumented for the `trace.flask.` namespace. So the metrics we'll focus on are called `trace.flask.request.hits` and `trace.flask.request.errors`. Let’s use this to create our first SLI. 
