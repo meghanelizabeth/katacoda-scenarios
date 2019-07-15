@@ -10,8 +10,8 @@ Before we start killing containers, maybe check back to the app and add more pum
 Open a new terminal window by clicking the + sign within Katacoda. There is an option called Open New Terminal.
  
 Try removing a running service with a:
-$ docker ps
-$ docker kill <containerid>
+`$ docker ps`
+`$ docker kill <containerid>`
  
 Kill the container running the pumps: 
 

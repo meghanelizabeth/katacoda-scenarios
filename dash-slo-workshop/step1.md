@@ -1,4 +1,4 @@
-# Starting our Microservices with Docker Compose
+# Starting our microservices with Docker Compose
 
 This SLO workshop uses multiple docker images in order to build a microservices environment for local development.
 
