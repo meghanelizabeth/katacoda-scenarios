@@ -19,7 +19,7 @@ You can see that a `POST` to
 
 Let’s go to the frontend service dashboard. In the side nav click: **APM -> Services -> Frontend**
 
-There haven’t been any errors *yet*, since we just got started. So the services dashboard will probably look something like this: 
+We haven’t purposefully introduced any errors *yet*, since we just got started. So the services dashboard may look something like this: 
 
 ![Frontend Dash](../assets/frontend-dash.png)
 
