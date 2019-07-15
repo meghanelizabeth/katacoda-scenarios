@@ -5,11 +5,14 @@ Let's start introducing errors by killing containers! Explore what happens to ou
 In the real world, there’s a lot of traffic and there’s definitely going to be some errors. 
 For now we are dealing with our small water pump app. 
 
-Before we start killing containers, maybe check back to the app and add more pumps! https://2886795280-5000-ollie01.environments.katacoda.com/
+Before we start killing containers, maybe check back to the app and add more pumps! Click on IoT Project in Katacoda to open the app.
  
 Open a new terminal window by clicking the + sign within Katacoda. There is an option called Open New Terminal.
- 
-Try removing a running service with a:
+
+Once the terminal is open run the following command to kill the container running the pumps: 
+`docker stop $(docker ps -aqf "name=sloworkshop_pumps")`
+
+As an alternative and if you are more familiar with docker, try removing a running service with a:
 `$ docker ps`
 `$ docker kill <containerid>`
  

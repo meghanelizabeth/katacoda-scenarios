@@ -7,8 +7,9 @@ We can inspect the `docker-compose.yml` in the SLO workshop folder, and see the 
 Let's first bring everything up with the following command:
 `DD_API_KEY=<api key> docker-compose up`
 
-You'll be able to interact with the web app running on port 5000 in the web browser here:
-https://2886795280-5000-ollie01.environments.katacoda.com/
+Access your API key by clicking: **Integrations -> APIs** 
+
+You'll be able to interact with the web app running on port 5000 in the web browser here. Click on IoT Project in Katacoda to open the app.
 
 After clicking the link, hop into Datadog, and check to see if your services are there. It may take several minutes for the services to appear. 
 

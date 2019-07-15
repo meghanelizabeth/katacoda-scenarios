@@ -5,7 +5,7 @@ Let’s explore what we can have available in Datadog. There are a few ways to d
 ![Trace Search](../assets/trace-search.png)
 
 
-We care about users being able to add pumps so let’s scope down to the `add_pump` resource. This is core to our `frontend` service. 
+We care about users being able to add pumps so let’s scope down to the `add_pump` resource by using the facets on the left side of the screen. This is core to our `frontend` service. 
 
 *[Optional] If you'd like, you can click on any of these traces to show the transaction:*
 

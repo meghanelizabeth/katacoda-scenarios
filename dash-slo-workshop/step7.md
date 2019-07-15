@@ -12,7 +12,7 @@ Now let’s create our SLO. Navigate to New Service Level Objective, https://app
 
 Go back to the water pump app and add a few more pumps. Observe the SLO, the error budget should be 100%
 
-https://2886795280-5000-ollie01.environments.katacoda.com/
+Click on IoT Project in Katacoda to open the app.
 
 Now let’s edit the pumps service to introduce some latency and examine the results. 
 

@@ -41,7 +41,9 @@ Next we set our SLO target and time window we are measuring against.
 
 Select 99% over 30 day time window. 
 
-This means that we are setting an SLO to say that 99% of requests to the `add_pump` endpoint must be successful over 30 days. 
+This means that we are setting an SLO to say that 99% of requests to the `add_pump` endpoint must be successful over 30 days. You can even use this as your title! 
+
+*Optionally, you can add a description and tag your SLO.* 
 
 Click save! 
 
@@ -49,7 +51,6 @@ Click save!
 
 Check out your data on the SLO detail page! 
 
-Go back to our water pump app and add generate requests by adding more pumps! 
-https://2886795280-5000-ollie01.environments.katacoda.com/
+Go back to our water pump app and add generate requests by adding more pumps! Click on IoT Project in Katacoda to open the app.
 
 When you first check it out, it’ll likely say 100%. With the nature of the workshop, there aren’t any errors yet (and also a lower number of requests). But in our next step we will cause chaos and produce failure in the systems.
