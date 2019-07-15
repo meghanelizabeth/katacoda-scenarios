@@ -1,4 +1,4 @@
-# Starting Our Microservices with Docker Compose
+# Starting our Microservices with Docker Compose
 
 This SLO workshop uses multiple docker images in order to build a microservices environment for local development.
 
@@ -11,7 +11,6 @@ You'll be able to interact with the web app running on port 5000 in the web brow
 https://2886795280-5000-ollie01.environments.katacoda.com/
 
 After clicking the link, hop into Datadog, and check to see if your services are there. It may take several minutes for the services to appear. 
-
 
 ![Service Nav](../assets/services-nav.png)
 

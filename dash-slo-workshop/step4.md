@@ -1,6 +1,6 @@
 # Create a service level indicator (SLI) and service level objective SLO
 
-Navigate to create a new Service Level Objective. You can get there by clicking through to the subnav item under Monitors or going directly to https://app.datadoghq.com/slo
+Navigate to create a new SLI and SLO. You can get there by clicking through to the sub-nav item under Monitors or going directly to https://app.datadoghq.com/slo
 
 ![SLO Nav](../assets/slo-nav.png)
 
@@ -10,14 +10,14 @@ And New SLO in the top right corner:
 
 ## Identify the SLI 
 
-There are a couple of options for us `Monitor Based` or `Event Based`. But we care about availability and error rate so we'll select `Event Based` under `Define The Source` for our SLI creation. 
+There are a couple of options for us: `Monitor Based` or `Event Based`. But we care about availability and error rate so we'll select `Event Based` under `Define The Source` for our SLI creation. Using event based we can track percentage of requests that are successful. 
 
-First step: In the numerator field select `trace.flask.request.hits` scoped to the service and resource we care about: `service:iot-frontend`, `resource_name:post_/add_pump`, `env:slo-workshop`. The numerator represents all of your “good” (successful) hits.
+**First step:** In the numerator field select `trace.flask.request.hits` scoped to the service and resource we care about: `service:iot-frontend`, `resource_name:post_/add_pump`, `env:slo-workshop`. The numerator represents all of your “good” (successful) hits.
 
 ![Editor](../assets/sli-edit.png)
 
 
-Second step: Defining the denominator. For this service we need to add a query summing two metrics `trace.flask.request.hits` and `trace.flask.request.errors` to get the total of requests.  
+**Second step:** Defining the denominator. For this service we need to add a query summing two metrics `trace.flask.request.hits` and `trace.flask.request.errors` to get the total of requests.  
 
 To add a second query: click advanced, change the metric, `sum a + b`
 
@@ -52,4 +52,4 @@ Check out your data on the SLO detail page!
 Go back to our water pump app and add generate requests by adding more pumps! 
 https://2886795280-5000-ollie01.environments.katacoda.com/
 
-When you first check it out, it’ll likely say 100%. With the nature of the workshop, there aren’t any errors yet. But in our next step we will cause chaos and produce failure in the systems.
+When you first check it out, it’ll likely say 100%. With the nature of the workshop, there aren’t any errors yet (and also a lower number of requests). But in our next step we will cause chaos and produce failure in the systems.

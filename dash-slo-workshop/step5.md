@@ -1,6 +1,6 @@
 # Modeling Failure in Our Systems
 
-For our final challenge, let's start introducing errors by killing containers! Let’s see what happens to our error budget. 
+Let's start introducing errors by killing containers! Explore what happens to our error budget. 
  
 In the real world, there’s a lot of traffic and there’s definitely going to be some errors. 
 For now we are dealing with our small water pump app. 
@@ -17,7 +17,7 @@ Kill the container running the pumps:
 
 ![Container IDs](../assets/container-ids.png)
  
-Go back to your SLO details page. What happens? 
+Go back to the SLO details page. What happens? 
 
 ![SLI Detail Page](../assets/detail-page-errors.png)
 

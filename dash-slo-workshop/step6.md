@@ -1,11 +1,12 @@
 # Latency SLIs using bucketed counters (optional)
 
+As we also care about the latency experienced by our users, we’ll now add a Latency SLI for our User Journey.
 
 There are several ways of implementing a Latency SLI. One way that we are going to discuss during this step is to increment a counter for each event (e.g a HTTP  request) that completes under a certain time (the good events) and compare this value to the total number of events. It’s also helpful to increment multiple counter that represent “buckets” of time, for example:
-All requests <= 10ms
-All requests <= 50ms
-All requests <= 500ms
-All requests <= 500ms
+* All requests <= 10ms
+* All requests <= 50ms
+* All requests <= 500ms
+* All requests <= 500ms
 
 We call this technique “bucketed counters”. The algorithm can be summarized like this in pseudo-code:
 
