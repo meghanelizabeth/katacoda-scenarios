@@ -1,28 +1,20 @@
-# Latency SLIs using bucketed counters (optional)
+# Adding a monitor-based SLI (optional)
 
-If you walked through step 6, you may have noticed that we were using a  gauge metric to represent the latency: `trace.flask.request.duration.by.resource_service.99p`. And we used a monitor to find out the percentage of the time that this gauge is under our SLO threshold. While this works, it can be a bit hard to grasp.
+As we also care about the latency experienced by our users, we’ll now add a Latency SLI for our User Journey. We can define this SLI as: “99% of time, the p99 latency of adding a pump should be lower than 500ms ”
 
-Another way of implementing a Latency SLI is to increment a counter for each event (e.g a HTTP  request) that completes under a certain time (the good events) and compare this value to the total number of events. It’s also helpful to increment multiple counter that represent “buckets” of time, for example:
-All requests <= 10ms
-All requests <= 50ms
-All requests <= 500ms
-All requests <= 500ms
+Navigate to Monitors / New Monitors and select APM Metrics, https://app.datadoghq.com/monitors#create/apm. 
 
-We call this technique “bucketed counters”. The algorithm can be summarized like this in pseudo-code:
+Under “Select monitor scope”, pick Service: frontend, Resource: post_/add_pump.
 
-Buckets = [10, 50, 500] # in milliseconds
+Under “Set alert conditions” set the monitor to alert when the p99 latency is above 0.5s over the last 5 minutes. Then save the monitor.
 
-`For each event (e.g request):`
-`startTime = Start a time timer`
-`do something with this event...`
-`endTime = Stop the timer`
-`timeTaken = endTime - startTime`
+Now let’s create a Monitor based SLO. Navigate to New Service Level Objective, https://app.datadoghq.com/slo/new. Select Monitor Based and select the monitor you just created. Then set a target of 99% over the past 7 day and save the new SLO.
 
-`Foreach bucket in sort(buckets):`
-`If timeTaken <= bucket:`
-`incrementCounter(“metric.latency.count.under_{bucket}”, 1)`
-	`incrementCounter(“metrics.latency.count.total”, 1)`
+Go back to the Waterpump UI and add a few more pumps. Observe the SLO, the error budget should be 100%
 
-To implement this you’ll need to emit custom metrics from the application using Dogstatd, https://docs.datadoghq.com/developers/dogstatsd/.
+Now let’s edit the pumps service to introduce some latency and examine the results. 
 
-You can then create a new Event Based SLO based on the two metrics.
+In the terminal type Ctrl+C to stop the docker-compose stack, then navigate to pumps-service/pump.py. Find the code that handles the creation of a new pump and add sleep for 1s with time.sleep(1). Then bring the stack back up with docker-compose up.
+
+Add a few more pumps and observe how it affects the error budget of the new SLO.
+
