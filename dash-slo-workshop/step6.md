@@ -9,16 +9,16 @@ There are several ways of implementing a Latency SLI. One way that we are going 
 
 We call this technique “bucketed counters”. The algorithm can be summarized like this in pseudo-code:
 
-Buckets = [10, 50, 500] # in milliseconds
+`Buckets = [10, 50, 500] # in milliseconds`
 
 `For each event (e.g request):`
-`startTime = Start a time timer`
-`do something with this event...`
-`endTime = Stop the timer`
-`timeTaken = endTime - startTime`
+	`startTime = Start a time timer`
+	`do something with this event...`
+	`endTime = Stop the timer`
+	`timeTaken = endTime - startTime`
 
-`Foreach bucket in sort(buckets):`
-`If timeTaken <= bucket:`
+	`Foreach bucket in sort(buckets):`
+		`If timeTaken <= bucket:`
 `incrementCounter(“metric.latency.count.under_{bucket}”, 1)`
 	`incrementCounter(“metrics.latency.count.total”, 1)`
 
