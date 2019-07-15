@@ -2,7 +2,7 @@
 
 Welcome! We'll be running a docker-compose command, allowing us to spin up an entire environment.
 
-You'll be using the Datadog account created for you using the username and password credentials assigned to you at your seat. Follow along with Datadog open in another browser.
+You'll be using the Datadog account created for you. Use the username and password credentials assigned to you at your seat. Follow along with Datadog open in another browser.
 
 Welcome to the workshop!
 Uptime is a poor measure of reliability. Agile development’s fail-fast approach coupled with distributed applications and dynamic infrastructure requires us to have a better understanding of reliability.
