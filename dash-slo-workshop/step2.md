@@ -15,12 +15,11 @@ Both Flask applications are automatically instrumented by Datadog APM (see the `
 This Katacoda environment allows you to modify the Python code and see the results. Simply browse the code in the editor and edit it then type CTRL+c in the terminal to quit Docker Compose and start it again with the `docker-compose up` command.
 
 
-So let's think about reliability of this system. To start tracking SLIs we'll consider what our user journey should be. Go to the water pump web app and explore! https://2886795280-5000-ollie01.environments.katacoda.com/
+So let's think about reliability of this system. To start tracking SLIs we'll consider what our user journey should be. Go to the water pump web app and explore! Click on IoT Project in Katacoda to open the app.
 
 One of the main functions on this page is the ability to add a new water pump. Can you add one? 
 
-Go to the app and add new pumps! https://2886795280-5000-ollie01.environments.katacoda.com/
-
+Go to the app and add new pumps! 
 
 ![Water Pump](../assets/water-pump-app.png)
 
