@@ -14,6 +14,7 @@ Once the terminal is open run the following command to kill the container runnin
 
 As an alternative and if you are more familiar with docker, try removing a running service with a:
 `$ docker ps`
+
 `$ docker kill <containerid>`
  
 Kill the container running the pumps: 
