@@ -1,4 +1,4 @@
-# Modeling Failure in Our Systems
+# Modeling failure in our systems
 
 Let's start introducing errors by killing containers! Explore what happens to our error budget. 
  
