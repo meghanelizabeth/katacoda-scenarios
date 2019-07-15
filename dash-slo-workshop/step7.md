@@ -1,8 +1,6 @@
 # Adding a monitor-based SLI (optional)
 
-As we also care about the latency experienced by our users, we’ll now add a Latency SLI for our User Journey. 
-
-Other ways to track latency as an SLI would be using a Datadog Monitor. We can define this SLI as: “99% of time, the p99 latency of adding a pump should be lower than 500ms ”
+As we also care about the latency experienced by our users, we’ll now add a Latency SLI for our User Journey. Other ways to track latency as an SLI would be using a Datadog Monitor for a Monitor driven SLI. We can define this SLI as: “99% of time, the p99 latency of adding a pump should be lower than 500ms ”
 
 Navigate to Monitors / New Monitors and select APM Metrics, https://app.datadoghq.com/monitors#create/apm. 
 
@@ -20,4 +18,4 @@ In the terminal type Ctrl+C to stop the docker-compose stack, then navigate to p
 
 Add a few more pumps and observe how it affects the error budget of the new SLO.
 
-Note: You may have noticed that we are using a gauge metric to represent the latency for this example: `trace.flask.request.duration.by.resource_service.99p`. And we used a monitor to find out the percentage of the time that this gauge is under our SLO threshold. While this works, it can be a bit hard to grasp. You may find that tracking latency as bucketed counters works better for your requirements. 
+Note: You may have noticed that we are using a gauge metric to represent the latency for this example: `trace.flask.request.duration.by.resource_service.99p` And we used a monitor to find out the percentage of the time that this gauge is under our SLO threshold. While this works, it can be a bit hard to grasp. You may find that tracking latency as bucketed counters works better for your requirements. 
