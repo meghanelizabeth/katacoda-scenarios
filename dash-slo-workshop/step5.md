@@ -13,6 +13,7 @@ Once the terminal is open run the following command to kill the container runnin
 `docker stop $(docker ps -aqf "name=sloworkshop_pumps")`
 
 As an alternative and if you are more familiar with docker, try removing a running service with a:
+
 `$ docker ps`
 
 `$ docker kill <containerid>`
